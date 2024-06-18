@@ -1,0 +1,112 @@
+$ git config --global user.name "chinmayeeeng"
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~ (a2)
+$ git config --global user.email "chinmaye5ng@gmail.com"
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~ (a2)
+$ mkdir labtest
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~ (a2)
+$ git clone https://github.com/chinmayeeeng/cloudtest.git
+Cloning into 'cloudtest'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~ (a2)
+$ cd labtest
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/labtest (a2)
+$ cd cloudtest
+bash: cd: cloudtest: No such file or directory
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/labtest (a2)
+$ cd
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~ (a2)
+$ cd labtest
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/labtest (a2)
+$ cd
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~ (a2)
+$ cd cloudtest
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   cns.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ git add .
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ git commit -m "first commit"
+[main 4ba2001] first commit
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 290.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/chinmayeeeng/cloudtest.git
+   75bea3d..4ba2001  main -> main
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ git fetch origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 943 bytes | 55.00 KiB/s, done.
+From https://github.com/chinmayeeeng/cloudtest
+   4ba2001..20d68e2  main       -> origin/main
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ git pull origin main
+From https://github.com/chinmayeeeng/cloudtest
+ * branch            main       -> FETCH_HEAD
+Updating 4ba2001..20d68e2
+Fast-forward
+ cns.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ git checkout -b a5
+Switched to a new branch 'a5'
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (a5)
+$ git reset --soft
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (a5)
+$ git branch -d a5
+error: cannot delete branch 'a5' used by worktree at 'C:/Users/LENOVO/cloudtest'
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (a5)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ git branch -d a5
+Deleted branch a5 (was 20d68e2).
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$ ^C
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/cloudtest (main)
+$
