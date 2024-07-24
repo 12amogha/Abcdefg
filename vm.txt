@@ -1,0 +1,8 @@
+-settings of tht vm-> network side bar ->  change network to NAT network
+-up panel tools->Network ->properties->NAT Network tab->Create two NAT Network
+-Goto Ubuntu-> settings->Network->Change to Nat Network , name it as NatNetwork1 or NatNetwork2 
+-Goto tht vm,goto settings-> Shared Folders-> click on add button ( + button right side)->make folder path as other, then create a new folder and select tht folder, tick on automount.
+-Goto Settings-> Network->select the nat network name
+ vb
+-reboot and start ubuntu
+-In terminal : sudo adduser <user> vboxsf
